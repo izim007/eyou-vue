@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <!-- <div class="hello">
     <a id="custom-login-btn" @click="loginWithKakao">
       <img
         src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
@@ -7,23 +7,51 @@
         alt="카카오 로그인 버튼"
       />
     </a>
-  </div>
+  </div> -->
+    <div class="hello">
+  	<!-- <h1 id="show-modal" @click="showModal = true">Show Modal</h1> -->
+     <Modal v-if="showModal" @close="showModal = false">
+    <!-- <h3 slot="body">모달 창 제목</h3> -->
+  <div slot="body" class="wrap">
+    <main>
+     <div class="modal">
+        <img src="@/assets/images/intro_logo.png" class="logo" alt="이유있는 이유식" title="이유있는 이유식">
+        <p>로그인하고 우리 아기 발달 단계에 따른<br> 맞춤 이유식 레시피를<br> 더욱 편하게 만나보세요.</p>
+        <div class="wrap_btn">
+            <div class="btn btn_kakao" @click="loginWithKakao">카카오</div>
+            <div class="btn btn_naver">네이버</div>
+            <div class="btn btn_google">구글</div>
+            <p class="signup">아직 회원이 아니신가요? 3초면 가입완료 <img src="@/assets/images/bul_right2.png"></p>
+        </div>
+     </div>
+    </main> 
+  </div><!--.wrap-->
+     </Modal>
+     </div>
 </template>
 
 <script>
 import axios from "axios";
+import '@/assets/css/common.css';
+import '@/assets/css/eu.css';
+import Modal from '../components/LoginModal.vue'
 
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-  name: "HelloWorld",
+  name: "LoginView",
   props: {
     msg: String,
   },
 
   data: () => ({
     nextUrl: "",
+    showModal: true
   }),
+
+  components : {
+     Modal,
+   },
 
   created() {
     if (this.$route.params.nextUrl != undefined) {
@@ -85,6 +113,7 @@ export default {
                     //   console.log("hastoken: "+_this.token);
                     // }
                     
+                    console.log("_this.nextUrl: "+ _this.nextUrl);
                     // 로그인 성공 후 next url로 이동
                     _this.$router.push("/" + _this.nextUrl);
                   }
