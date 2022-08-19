@@ -9,12 +9,10 @@
     </a>
   </div> -->
     <div class="hello">
-  	<!-- <h1 id="show-modal" @click="showModal = true">Show Modal</h1> -->
      <Modal v-if="showModal" @close="showModal = false">
-    <!-- <h3 slot="body">모달 창 제목</h3> -->
   <div slot="body" class="wrap">
     <main>
-     <div class="modal">
+     <div class="modal_Login">
         <img src="@/assets/images/intro_logo.png" class="logo" alt="이유있는 이유식" title="이유있는 이유식">
         <p>로그인하고 우리 아기 발달 단계에 따른<br> 맞춤 이유식 레시피를<br> 더욱 편하게 만나보세요.</p>
         <div class="wrap_btn">
@@ -34,7 +32,7 @@
 import axios from "axios";
 import '@/assets/css/common.css';
 import '@/assets/css/eu.css';
-import Modal from '../components/LoginModal.vue'
+import Modal from '@/components/LoginModal.vue'
 
 import { mapActions, mapGetters } from "vuex";
 

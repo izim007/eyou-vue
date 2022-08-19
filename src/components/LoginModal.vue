@@ -1,5 +1,5 @@
 <template>
-   <transition name="modal">
+   <transition name="modal_Login">
    <div class="modal-mask" @click="$emit('close')">
     <div class="modal-wrapper">
      <div class="modal-container">
@@ -13,9 +13,6 @@
       </div>
       <div class="modal-footer">
        <slot name="footer">
-        <!-- <button class="modal-default-button" @click="$emit('close')">
-         close
-        </button> -->
        </slot>
       </div>
      </div>
@@ -52,7 +49,7 @@ export default {
 
 
 .modal-container {
-  width:  50%;
+  width:  80%;
   margin: 0px auto;
   padding: 0px auto;
   background-color: #fff;
@@ -77,16 +74,6 @@ export default {
 .modal-default-button {
   float: right;
 }
-
-
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
 
 
 .modal-enter {

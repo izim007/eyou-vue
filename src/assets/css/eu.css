@@ -154,6 +154,20 @@ main .modal .signup         {width: 100%;color:#CBCBCB; font-size: 14px; padding
 main .modal .signup:hover   {text-decoration: underline; color: #666666;}
 main .modal .signup img     {padding: 10px; display: inline-block; }
 
+main .modal_Login                {width: 90%; border-radius:20px; box-shadow: 2px 4px 6px 0 #ccc; margin: 0 auto; padding: 10px; text-align: center;}
+main .modal_Login  .logo          {padding:50px 0;}
+main .modal_Login p              {width: 240px;margin: 0 auto;}
+main .wrap_btn      { width: 100%; text-align: center; margin: 30px auto 10px;}
+main .wrap_btn .btn {border-radius:20px; box-shadow:4px 4px 5px 0px #bbb;font-size: 16px;color:#028870;font-weight: 700; padding:10px 0 0 0 ; width: 100%; height:30px;margin: 10px auto; text-align: center;}
+main .wrap_btn .btn_kakao  {background:#FFE90A url(../images/logo_kakao.png)15% 50% no-repeat; }
+main .wrap_btn .btn_naver  {background:#00BF19 url(../images/logo_naver.png)15% 50% no-repeat; color: #fff;}
+main .wrap_btn .btn_google {background:#4285F4 url(../images/logo_google.png)15% 50% no-repeat; color: #fff;}
+main .wrap_btn .btn_o       {border-radius:10px; font-size: 14px;color:#fff;font-weight: 400; padding:4px 0; width: 100%; margin: 10px auto; text-align: center;}
+main .wrap_btn .btn_review  {background-color:#FF951b;}
+main .modal_Login  .signup         {width: 100%;color:#CBCBCB; font-size: 14px; padding: 20px 0 0 0;cursor: pointer;}
+main .modal_Login .signup:hover   {text-decoration: underline; color: #666666;}
+main .modal_Login .signup img     {padding: 10px; display: inline-block; }
+
 
 
 body{
